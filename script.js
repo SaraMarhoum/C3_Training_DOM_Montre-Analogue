@@ -12,7 +12,7 @@ function demarrerLaMontre() {
     const actualDate = new Date();
 
     //Ajouter l'heure , minite , seconde  dans des varaiables
-    // var heure = actualDate.getHours();
+    var heure = actualDate.getHours();
     var minute = actualDate.getMinutes();
     var seconde = actualDate.getSeconds();
 
@@ -21,12 +21,12 @@ function demarrerLaMontre() {
      // 360° dans le rond & 60s/min & 1min = 360° ==> on veut ° pour every sec
     const secDeg = ((seconde / 60) * 360);
     const minDeg = ((minute / 60) * 360) + ((seconde / 60) + 6) ;
-    // const hrDeg = ((heure / 12) * 360) + ((minute / 60) * 360);
+    const hrDeg = ((heure / 12) * 360) + ((minute / 60) * 30);
 
     // Déplacer les aiguilles 
     AIGUILLESEC.style.transform=`rotate(${secDeg}deg)`
     AIGUILLEMIN.style.transform=`rotate(${minDeg}deg)`
-    // AIGUILLEHR.style.transform=`rotate(${hrDeg}deg)`
+    AIGUILLEHR.style.transform=`rotate(${hrDeg}deg)`
 
 }
 
