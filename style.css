@@ -1,4 +1,9 @@
 /* Layout */
+
+body{
+    background-image: url(https://cdn.hipwallpaper.com/i/1/28/YsOr4L.jpg);
+}
+
 .main {
     display: flex;
     padding: 2em;
