@@ -1,7 +1,16 @@
 /* Layout */
+:root{
+    --horloge:#000;
+    --background: url(https://www.musictruth.com/wp-content/uploads/2016/12/morning-coffee-video-background.jpg);
+    --écriture: #fff;
+
+}
+
 
 body{
-    background-image: url(https://cdn.hipwallpaper.com/i/1/28/YsOr4L.jpg);
+    background-image: var(--background);
+    background-position: center;
+    background-size: cover;
 }
 
 .main {
@@ -12,6 +21,24 @@ body{
     align-items: middle;
 }
 
+.switchTheme{
+    cursor: pointer;
+    background-color:var(--horloge);
+    color: var(--écriture);
+    width: 145px;
+    text-align: center;
+    padding: 16px;
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 11px;
+    box-shadow: 0 9px #999;
+}
+.switchTheme:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+
 .clockbox,
 #clock {
     width: 100%;
@@ -20,38 +47,38 @@ body{
 /* Clock styles */
 .circle {
     fill: none;
-    stroke: #000;
+    stroke: var(--horloge);
     stroke-width: 9;
     stroke-miterlimit: 10;
 }
 
 .mid-circle {
-    fill: #000;
+    fill: var(--horloge);
 }
 .hour-marks {
     fill: none;
-    stroke: #000;
+    stroke: var(--horloge);
     stroke-width: 9;
     stroke-miterlimit: 10;
 }
 
 .hour-arm {
     fill: none;
-    stroke: #000;
+    stroke: var(--horloge);
     stroke-width: 17;
     stroke-miterlimit: 10;
 }
 
 .minute-arm {
     fill: none;
-    stroke: #000;
+    stroke: var(--horloge);
     stroke-width: 11;
     stroke-miterlimit: 10;
 }
 
 .second-arm {
     fill: none;
-    stroke: #000;
+    stroke: var(--horloge);
     stroke-width: 4;
     stroke-miterlimit: 10;
 }

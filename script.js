@@ -32,3 +32,33 @@ function demarrerLaMontre() {
 
 // Exercuter la fonction chaque second
 var interval = setInterval(demarrerLaMontre, 1000);
+
+
+
+
+//Changer le theme de la page    
+    const switchThemeBtn = document.querySelector('.switchTheme')
+    let toggleTheme = 0;
+    
+
+    switchThemeBtn.addEventListener('click', () => {
+
+        if(toggleTheme === 0) {
+
+            document.documentElement.style.setProperty('--écriture', '#000');
+            document.documentElement.style.setProperty('--background', 'url(https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)');
+            document.documentElement.style.setProperty('--horloge', '#f1f1f1');
+            toggleTheme++;
+
+        } else {
+
+            document.documentElement.style.setProperty('--écriture', '#f1f1f1');
+            document.documentElement.style.setProperty('--background', 'url(https://www.musictruth.com/wp-content/uploads/2016/12/morning-coffee-video-background.jpg)');
+            document.documentElement.style.setProperty('--horloge', '#000');
+            toggleTheme--;
+
+        }
+
+    })
+    
+    
